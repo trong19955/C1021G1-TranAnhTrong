@@ -1,0 +1,4 @@
+com/codegym/model/Email.java
+ com.codegym.model.Email
+com/codegym/controller/EmailController.java
+ com.codegym.controller.EmailController

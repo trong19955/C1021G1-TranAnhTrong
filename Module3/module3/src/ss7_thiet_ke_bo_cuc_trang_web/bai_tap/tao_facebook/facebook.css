@@ -1,0 +1,130 @@
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    font-family: Florence, cursive;
+    text-align: center;
+    background-color: #CDCDCD;
+    color: blue;
+    padding-right: 200px;
+}
+
+#topFb {
+    height:60px;
+    padding:0px;
+    margin:10px;
+    background-color: #2c7abe;
+    border: 1px solid #CDCDCD;
+
+}
+#topFb ul, #topFb li {
+    padding: 0;
+    margin: 0;
+
+}
+#topFb li{
+    position: relative;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#topFb a{
+    text-decoration: none;
+    color: aliceblue;
+}
+#topFb li a{
+    width: 100px;
+    height: 45px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    background-color: #2c7abe;
+    color: white;
+}
+#topFb ul ul li a{
+    width: 200px;
+    text-align: left;
+    padding-left: 10px;
+}
+#topFb a:hover{
+    background-color: #e2e5e9;
+}
+#topFb li a:hover{
+    background-color: yellow;
+}
+#topFb ul ul{
+    position: absolute;
+    top: 30px;
+    left:15px;
+    visibility: hidden;
+}
+#topFb ul li:hover ul{
+    visibility: visible;
+}
+* {
+    box-sizing: border-box;
+}
+.column {
+    float: left;
+    padding: 10px;
+    border: solid 5px white;
+}
+
+ /*Cột bên trái và phải */
+.column.side {
+    width: 25%;
+    height: 600px;
+    padding-left: 60px;
+    background-color: #e2e5e9;
+    border: solid 5px white;
+}
+
+/* Cột chính giữa */
+.column.middle {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+}
+
+/* Clear float khác sau các cột */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Bố cục linh hoạt: ba cột xếp chồng lên nhau thay vì cạnh nhau khi màn hình
+có chiều rộng dưới 600px */
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+.background{
+    padding-left: 30px;
+}
+
+/* Định dạng footer */
+.footer {
+    background-color: #2c7abe;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}

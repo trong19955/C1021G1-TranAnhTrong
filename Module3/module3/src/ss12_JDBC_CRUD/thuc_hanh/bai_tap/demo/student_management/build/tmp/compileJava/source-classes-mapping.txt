@@ -1,0 +1,14 @@
+reponsitory/BaseRepository.java
+ reponsitory.BaseRepository
+controller/StudentController.java
+ controller.StudentController
+service/IStudentService.java
+ service.IStudentService
+reponsitory/IStudentRepository.java
+ reponsitory.IStudentRepository
+model/Student.java
+ model.Student
+service/StudentService.java
+ service.StudentService
+reponsitory/StudentRepository.java
+ reponsitory.StudentRepository

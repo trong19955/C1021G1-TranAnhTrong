@@ -32,9 +32,10 @@ public class CustomerController {
     }
 
     @PostMapping("/save")
-    public String save(Customer customer) {
+    public String save(Customer customer, RedirectAttributes redirect) {
         customer.setId((int) (Math.random() * 10000));
         customerService.save(customer);
+        redirect.addFlashAttribute("success", "Successfully Customer!");
         return "redirect:/customer";
     }
 
@@ -45,8 +46,11 @@ public class CustomerController {
     }
 
     @PostMapping("/update")
-    public String update(Customer customer) {
+    public String update(Customer customer, RedirectAttributes redirect) {
+
         customerService.update(customer.getId(), customer);
+        redirect.addFlashAttribute("success", "Update customer successfully!");
+
         return "redirect:/customer";
     }
 
@@ -60,6 +64,7 @@ public class CustomerController {
     public String delete(Customer customer, RedirectAttributes redirect) {
         customerService.remove(customer.getId());
         redirect.addFlashAttribute("success", "Removed customer successfully!");
+
         return "redirect:/customer";
     }
 

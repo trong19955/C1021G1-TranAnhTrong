@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>App Music Information</title>
+</head>
+<body>
+<form action="/appMusics" method="post">
+    <fieldset>
+        <legend>App Music Information</legend>
+        <input type="hidden" name="id" th:value="${appMusic.id}">
+        <table>
+            <tr>
+                <td>Id</td>
+                <td th:text="${appMusic.id}"></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text" name="name" th:value="${appMusic.name}">
+                </td>
+            </tr>
+            <tr>
+                <td>Name Singer</td>
+                <td>
+                    <input type="text" name="nameSinger" th:value="${appMusic.nameSinger}">
+                </td>
+            </tr>
+            <tr>
+                <td>King of music</td>
+                <td>
+                    <input type="text" name="kingOfMusic" th:value="${appMusic.kingOfMusic}">
+                </td>
+            </tr>
+            <tr>
+                <td>Link</td>
+                <td>
+                    <input type="text" name="link" th:value="${appMusic.link}">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Update">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+<a href="/appMusics">Back to list</a>.
+</body>
+</html>

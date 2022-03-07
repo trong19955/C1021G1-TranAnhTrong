@@ -1,0 +1,12 @@
+cg/wbd/grandemonstration/model/Customer.java
+ cg.wbd.grandemonstration.model.Customer
+cg/wbd/grandemonstration/AppInit.java
+ cg.wbd.grandemonstration.AppInit
+cg/wbd/grandemonstration/service/CustomerService.java
+ cg.wbd.grandemonstration.service.CustomerService
+cg/wbd/grandemonstration/service/HibernateCustomerServiceImpl.java
+ cg.wbd.grandemonstration.service.HibernateCustomerServiceImpl
+cg/wbd/grandemonstration/controller/CustomerController.java
+ cg.wbd.grandemonstration.controller.CustomerController
+cg/wbd/grandemonstration/AppConfig.java
+ cg.wbd.grandemonstration.AppConfig

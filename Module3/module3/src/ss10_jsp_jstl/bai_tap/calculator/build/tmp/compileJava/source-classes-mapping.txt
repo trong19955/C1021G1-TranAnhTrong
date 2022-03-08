@@ -1,4 +1,0 @@
-model/Calculator.java
- model.Calculator
-servlet/CalculatorServlet.java
- servlet.CalculatorServlet

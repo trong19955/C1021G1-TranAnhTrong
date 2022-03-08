@@ -1,6 +1,7 @@
-package com.codegym.cms.repository;
+package com.codegym.cms.repository.impl;
 
 import com.codegym.cms.model.Customer;
+import com.codegym.cms.repository.ICustomerRepository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -46,5 +47,7 @@ public class CustomerRepository implements ICustomerRepository {
         if (customer != null) {
             em.remove(customer);
         }
+
     }
+
 }

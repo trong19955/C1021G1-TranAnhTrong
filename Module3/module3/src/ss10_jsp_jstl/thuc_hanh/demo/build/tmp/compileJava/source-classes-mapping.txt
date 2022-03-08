@@ -1,4 +1,0 @@
-controller/StudentController.java
- controller.StudentController
-model/Student.java
- model.Student

@@ -1,30 +1,30 @@
 package com.example.ungdungmorongblog.model;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
-import java.util.Set;
 
 @Entity
 public class Blog {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String nameBlog;
     private Date dateStart;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-     @JoinColumn(name = "category_id",referencedColumnName = "id")
+    @ManyToOne
+    @JoinColumn(name = "category_id",referencedColumnName = "id")
     private Category category;
 
     public Blog() {
     }
 
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

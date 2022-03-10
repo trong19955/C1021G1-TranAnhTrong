@@ -33,14 +33,18 @@ public class BlogService implements IBlogService {
     }
 
     @Override
-    public Blog findById(int id) {
+    public Blog findById(Integer id) {
         return repository.findById(id).orElse(null);
     }
 
     @Override
-    public List<Blog> searchByName(String name) {
-        return repository.findByNameBlogContaining(name);
-
+    public void remove(Integer id) {
+        repository.deleteById(id);
     }
 
+    @Override
+    public List<Blog> searchByName(String name) {
+         return repository.searchByName(name);
+
+    }
 }

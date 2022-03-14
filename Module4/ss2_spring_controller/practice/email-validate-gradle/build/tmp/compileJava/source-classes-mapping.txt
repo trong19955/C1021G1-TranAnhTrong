@@ -1,2 +1,0 @@
-com/codegym/controller/EmailController.java
- com.codegym.controller.EmailController

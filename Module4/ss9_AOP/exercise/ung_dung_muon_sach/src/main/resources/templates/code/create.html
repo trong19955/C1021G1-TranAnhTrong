@@ -1,0 +1,24 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create code</title>
+</head>
+<body>
+<h1>Create code</h1>
+<p>
+    <a href="/code/list">Trở về trang danh sách code</a>
+</p>
+<form  th:object="${codeList}" method="post">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" th:field="*{nameBook}"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create code"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

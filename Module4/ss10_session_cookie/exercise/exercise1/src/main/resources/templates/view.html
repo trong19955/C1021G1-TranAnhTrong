@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        div{
+            border: blue;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<h3>View product</h3>
+<p>
+    <a th:href="@{/product}">
+        Back to product list
+    </a>
+</p>
+<div id="detail">
+    <div class="cusdetail">
+        <label><b>Name: </b></label>
+        <label th:text="${product.name}"></label>
+    </div>
+    <div class="cusdetail">
+        <label><b>Price: </b></label>
+        <label th:text="${product.prince}"></label>
+    </div>
+    <div class="cusdetail">
+        <label><b>Description Product: </b></label>
+        <label th:text="${product.description}"></label>
+    </div>
+    <div class="cusdetail">
+        <label><b>Image Product: </b></label>
+        <label ><img th:src="${product.getImage()}" alt=""></label>
+    </div>
+</div>
+</body>
+</html>

@@ -2,17 +2,21 @@ package com.example.demo.model;
 
 import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
+import java.util.Date;
+
 @Entity
 public class Book {
     @Id
-    @GeneratedValue( strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    private String bookLoanDay;
+    private Date bookLoanDay;
     private Integer deposits;
+
     @ManyToOne
-    @JoinColumn(name = "code_id",referencedColumnName = "id")
+    @JoinColumn(name = "code_id", referencedColumnName = "id")
     private Code code;
+
     public Book() {
     }
 
@@ -32,11 +36,11 @@ public class Book {
         this.name = name;
     }
 
-    public String getBookLoanDay() {
+    public Date getBookLoanDay() {
         return bookLoanDay;
     }
 
-    public void setBookLoanDay(String bookLoanDay) {
+    public void setBookLoanDay(Date bookLoanDay) {
         this.bookLoanDay = bookLoanDay;
     }
 
@@ -55,4 +59,5 @@ public class Book {
     public void setCode(Code code) {
         this.code = code;
     }
+
 }

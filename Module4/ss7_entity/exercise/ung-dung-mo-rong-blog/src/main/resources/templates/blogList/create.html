@@ -17,7 +17,7 @@
             <input type="text" th:field="*{nameBlog}"/>
         </div>
         <div>
-            <label>Category: </label><td>
+            <label>Category: </label>
             <select th:field="*{category.id}">
                 <option th:each="item: ${category}"
                         th:value="${item.id}" th:text="${item.nameCategory}"></option>

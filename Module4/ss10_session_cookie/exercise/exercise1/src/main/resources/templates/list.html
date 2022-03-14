@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<h3  style="text-align: center">Product</h3>
+<p>
+    <a th:href="@{/product/create}">
+        Add new Product
+    </a>
+</p>
+
+<a th:text="${messages}"></a>
+<table id = "product" border="1">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name Product</th>
+        <th>Price Product</th>
+        <th>Description Product</th>
+        <th>Image Product</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product : ${productList}">
+        <td th:text="${product.getId()}"></td>
+        <td ><a th:href="@{/product/{id}/view(id=${product.getId()})}" th:text="${product.getName()}"></a></td>
+        <td th:text="${product.getPrince()}"></td>
+        <td th:text="${product.getDescription()}"></td>
+        <td><img th:src="${product.getImage()}" alt=""></td>
+        <td><a th:href="@{/product/{id}/edit(id=${product.getId()})}">edit</a></td>
+        <td><a th:href="@{/product/{id}/delete(id=${product.getId()})}">delete</a></td>
+    </tr>
+    </tbody>
+</table><div  th:if="${list}">
+    <a th:href="@{'/product'(page = ${productList.number - 1})}"
+       th:if="${productList.hasPrevious()}">Previous</a>
+    <span th:text="${productList.number + 1}"></span>
+    <span th:text="${productList.totalPages}"></span>
+    <a th:href="@{'/product'(page = ${productList.number + 1})}"
+       th:if="${productList.hasNext()}">Next</a>
+</div>
+</body>
+</html>

@@ -12,12 +12,21 @@ public class Book {
     private String name;
     private Date bookLoanDay;
     private Integer deposits;
+    private int numberOfBooks;
 
     @ManyToOne
     @JoinColumn(name = "code_id", referencedColumnName = "id")
     private Code code;
 
     public Book() {
+    }
+
+    public int getNumberOfBooks() {
+        return numberOfBooks;
+    }
+
+    public void setNumberOfBooks(int numberOfBooks) {
+        this.numberOfBooks = numberOfBooks;
     }
 
     public Integer getId() {

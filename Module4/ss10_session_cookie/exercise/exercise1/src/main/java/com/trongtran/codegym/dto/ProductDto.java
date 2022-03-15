@@ -1,21 +1,17 @@
-package com.trongtran.codegym.model;
+package com.trongtran.codegym.dto;
 
-import javax.persistence.*;
+import javax.persistence.Column;
 import java.util.Objects;
 
-@Entity
-public class Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class ProductDto {
     private Long id;
     private String name;
     private String image;
-    @Column(columnDefinition = "LONGBLOB")
     private String description;
     private Long price;
     private Integer discount;
 
-    public Product() {
+    public ProductDto() {
     }
 
     public Long getId() {
@@ -70,10 +66,9 @@ public class Product {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Product product = (Product) o;
-        return Objects.equals(id, product.id);
+        ProductDto that = (ProductDto) o;
+        return id.equals(that.id);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(id);

@@ -1,52 +1,39 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <style>
-        img {
-            width: 100px;
-            height: 100px;
-        }
-    </style>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout::head}">
+    <meta charset="UTF-8">
+    <title>Shop</title>
 </head>
 <body>
-<h3  style="text-align: center">Product</h3>
-<p>
-    <a th:href="@{/product/create}">
-        Add new Product
-    </a>
-</p>
-
-<a th:text="${messages}"></a>
-<table id = "product" border="1">
-    <thead>
-    <tr>
-        <th>Id</th>
-        <th>Name Product</th>
-        <th>Price Product</th>
-        <th>Description Product</th>
-        <th>Image Product</th>
-        <th>Edit</th>
-        <th>Delete</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="product : ${productList}">
-        <td th:text="${product.getId()}"></td>
-        <td ><a th:href="@{/product/{id}/view(id=${product.getId()})}" th:text="${product.getName()}"></a></td>
-        <td th:text="${product.getPrince()}"></td>
-        <td th:text="${product.getDescription()}"></td>
-        <td><img th:src="${product.getImage()}" alt=""></td>
-        <td><a th:href="@{/product/{id}/edit(id=${product.getId()})}">edit</a></td>
-        <td><a th:href="@{/product/{id}/delete(id=${product.getId()})}">delete</a></td>
-    </tr>
-    </tbody>
-</table><div  th:if="${list}">
-    <a th:href="@{'/product'(page = ${productList.number - 1})}"
-       th:if="${productList.hasPrevious()}">Previous</a>
-    <span th:text="${productList.number + 1}"></span>
-    <span th:text="${productList.totalPages}"></span>
-    <a th:href="@{'/product'(page = ${productList.number + 1})}"
-       th:if="${productList.hasNext()}">Next</a>
+<div th:replace="~{layout::header}"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <table id="tableList">
+                <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Discount</th>
+                    <th scope="col">View and Buy</th>
+                </tr>
+                </thead>
+                <tbody>
+                <th:block th:each="product:${products}">
+                    <tr>
+                        <td th:text="${product.name}"></td>
+                        <td><img th:src="${product.image}"></td>
+                        <td th:text="${product.price}"></td>
+                        <td th:text="${product.discount}"></td>
+                        <td><a th:href="@{/view/__${product.id}__}">View</a></td>
+                    </tr>
+                </th:block>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
+<footer th:replace="/layout :: footer"></footer>
 </body>
 </html>

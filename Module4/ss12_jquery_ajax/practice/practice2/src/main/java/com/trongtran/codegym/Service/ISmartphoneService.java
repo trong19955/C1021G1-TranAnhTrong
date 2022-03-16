@@ -1,6 +1,7 @@
 package com.trongtran.codegym.Service;
 
-import com.codegym.model.Smartphone;
+
+import com.trongtran.codegym.model.Smartphone;
 
 import java.util.Optional;
 

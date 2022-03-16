@@ -1,4 +1,4 @@
-package com.codegym.model;
+package com.trongtran.codegym.model;
 
 
 import javax.persistence.*;

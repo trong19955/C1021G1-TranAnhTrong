@@ -1,8 +1,5 @@
 package com.trongtran.codegym.Service;
-
-import com.codegym.model.Smartphone;
-
-import com.trongtran.codegym.Service.ISmartphoneService;
+import com.trongtran.codegym.model.Smartphone;
 import com.trongtran.codegym.repository.ISmartphoneRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

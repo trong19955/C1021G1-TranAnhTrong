@@ -4,15 +4,11 @@ import com.trongtran.codegym.model.Cart;
 import com.trongtran.codegym.model.Product;
 import com.trongtran.codegym.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import java.util.List;
+
 import java.util.Optional;
 
 @Controller
@@ -28,7 +24,7 @@ public class ProductController {
 
     @GetMapping("/home")
     public ModelAndView showShop() {
-        ModelAndView modelAndView = new ModelAndView("/list");
+        ModelAndView modelAndView = new ModelAndView("list");
         modelAndView.addObject("products", productService.findAll());
         return modelAndView;
     }

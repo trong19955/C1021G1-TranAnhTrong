@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6c7b48d7-7ab6-4f73-a362-ab6bf9320653" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../ss11_web_service/exercise/ung-dung-mo-rong-blog/src/main/java/com/example/ungdungmorongblog/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss11_web_service/practice/practice1/src/main/java/com/trongtran/demo/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss11_web_service/practice/practice1/src/main/java/com/trongtran/demo/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss11_web_service/practice/practice1/src/main/java/com/trongtran/demo/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss11_web_service/practice/practice1/src/main/java/com/trongtran/demo/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss11_web_service/practice/practice1/src/main/java/com/trongtran/demo/service/IGeneralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss11_web_service/practice/practice1/src/main/java/com/trongtran/demo/service/impl/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/model/CodeBorrowed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/repository/ICodeBorrowedRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/service/ICodeBorrowedService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/service/impl/CodeBorrowedService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/resources/templates/borrow.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/resources/templates/return.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss10_session_cookie/exercise/exercise1/src/main/java/com/trongtran/codegym/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss10_session_cookie/exercise/exercise1/src/main/java/com/trongtran/codegym/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/controller/CodeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/model/Code.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/repository/IBookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/repository/IBookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/repository/ICodeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/service/IBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/service/IBookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/service/ICodeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/service/impl/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/service/impl/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/java/com/example/demo/service/impl/CodeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/resources/templates/book/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/resources/templates/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/resources/templates/book/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/resources/templates/code/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/resources/templates/code/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss9_AOP/exercise/ung_dung_muon_sach/src/main/resources/templates/layout.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="26SXJow9LDnftVdqD1koGrzscZQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6c7b48d7-7ab6-4f73-a362-ab6bf9320653" name="Default Changelist" comment="" />
+      <created>1647417891741</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647417891741</updated>
+      <workItem from="1647417892902" duration="185000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

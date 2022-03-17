@@ -5,7 +5,7 @@
 <!--    <script>-->
 <!--        $(document).ready(function(){-->
 <!--            $("#hide").click(function(){-->
-<!--                $("p").hide();-->
+<!--                $("p").fadeToggle(3000);-->
 <!--            });-->
 <!--            $("#show").click(function(){-->
 <!--                $("p").show();-->
@@ -19,28 +19,79 @@
 <!--<button id="show">Show</button>-->
 <!--</body>-->
 <!--</html>-->
-<!DOCTYPE html>
-<html>
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html>&ndash;&gt;-->
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+<!--&lt;!&ndash;    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;    <script>&ndash;&gt;-->
+<!--&lt;!&ndash;        $(document).ready(function () {&ndash;&gt;-->
+<!--&lt;!&ndash;            $("button").click(function () {&ndash;&gt;-->
+<!--&lt;!&ndash;                var div = $("div");&ndash;&gt;-->
+<!--&lt;!&ndash;                div.animate({left: '500px',&ndash;&gt;-->
+<!--&lt;!&ndash;                height: '+=100px',&ndash;&gt;-->
+<!--&lt;!&ndash;                width: '+=500px'}, "slow");&ndash;&gt;-->
+<!--&lt;!&ndash;                div.animate({fontSize: '100px'}, "slow");&ndash;&gt;-->
+<!--&lt;!&ndash;            });&ndash;&gt;-->
+<!--&lt;!&ndash;        });&ndash;&gt;-->
+<!--&lt;!&ndash;    </script>&ndash;&gt;-->
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+<!--&lt;!&ndash;<body>&ndash;&gt;-->
+<!--&lt;!&ndash;<button>Start Animation</button>&ndash;&gt;-->
+<!--&lt;!&ndash;<p>By default, all HTML elements have a static position,&ndash;&gt;-->
+<!--&lt;!&ndash;    and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to&ndash;&gt;-->
+<!--&lt;!&ndash;    relative, fixed, or absolute!</p>&ndash;&gt;-->
+<!--&lt;!&ndash;<div style="position: absolute"><img&ndash;&gt;-->
+<!--&lt;!&ndash;        src="https://muaxegiatot.vn/wp-content/uploads/2020/06/sieu-xe-la-gi-muaxegiatot-vn.jpg" alt="sieu xe"&ndash;&gt;-->
+<!--&lt;!&ndash;        style="width: 150px; position: absolute"></div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
+<!doctype html>
+<html lang="en">
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("button").click(function () {
-                var div = $("div");
-                div.animate({left: '500px'}, "slow");
-                div.animate({fontSize: '100px'}, "slow");
-            });
-        });
-    </script>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<button>Start Animation</button>
-<p>By default, all HTML elements have a static position,
-    and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to
-    relative, fixed, or absolute!</p>
-<div style="position: absolute"><img
-        src="https://muaxegiatot.vn/wp-content/uploads/2020/06/sieu-xe-la-gi-muaxegiatot-vn.jpg" alt="sieu xe"
-        style="width: 150px; position: absolute"></div>
 
+<table class="table">
+    <thead>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td scope="row"></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td scope="row"></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>e
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+

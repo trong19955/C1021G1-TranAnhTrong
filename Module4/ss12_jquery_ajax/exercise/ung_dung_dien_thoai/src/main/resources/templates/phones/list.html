@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>List Phone</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        function addNewPhone() {
+            //lay du lieu
+            let producer = $('#producer').val();
+            let description = $('#description').val();
+            let price = $('#price').val();
+            let newPhone = {
+                producer: producer,
+                description: description,
+                price: price
+            };
+            console.log(123)
+            // goi ajax
+            $.ajax({
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                type: "POST",
+                data: JSON.stringify(newPhone),
+                //tên API
+                url: "/phones",
+                //xử lý khi thành công
+                success:function (data){
+                    let content = '    <tr>\n' +
+                        '        <td>Producer</td>\n' +
+                        '        <td>Description</td>\n' +
+                        '        <td>Price</td>\n' +
+                        '        <td>Delete</td>\n' +
+                        '    </tr>';
+                    for (let i = 0; i < data.length; i++) {
+                        content += getPhone(data[i]);
+                    }
+                    document.getElementById('phoneList').innerHTML = content;
+                }
+
+            });
+            //chặn sự kiện mặc định của thẻ
+            event.preventDefault();
+        }
+
+        function getPhone(phone) {
+            return `<tr>
+                        <td >${phone.producer}</td>
+                        <td >${phone.description}</td>
+                        <td >${phone.price}</td>` +
+                `<td>
+                            <button class="deletePhone" onclick="deletePhone(${phone.id})">Delete</button>
+                          </td>
+                    </tr>`;
+        }
+        function deletePhone(id) {
+            $.ajax({
+                type: "DELETE",
+                //tên API
+                url: "/phones/" + id,
+                //xử lý khi thành công
+                dataType: "JSON",
+                success: function (data) {
+                    let content = '    <tr>\n' +
+                        '        <td>Producer</td>\n' +
+                        '        <td>Description</td>\n' +
+                        '        <td>Price</td>\n' +
+                        '        <td>Delete</td>\n' +
+                        '    </tr>';
+                    for (let i = 0; i < data.length; i++) {
+                        content += getPhone(data[i]);
+                    }
+                    document.getElementById('phoneList').innerHTML = content;
+                }
+
+            })
+
+        }
+
+        function successHandler(data) {
+            console.log(data)
+
+            let content = '    <tr>\n' +
+                '        <td>Producer</td>\n' +
+                '        <td>Description</td>\n' +
+                '        <td>Price</td>\n' +
+                '        <td>Delete</td>\n' +
+                '    </tr>';
+            for (let i = 0; i < data.length; i++) {
+                content += getPhone(data[i]);
+            }
+            document.getElementById('phoneList').innerHTML = content;
+            //     }
+            // });
+        }
+        $(document).ready(function () {
+            //sư kiện nào thực hiện Ajax
+            $('.deletePhone').click(function (event) {
+                //lay du lieu
+                let a = $(this);
+                let phoneId = a.attr("href");
+                // goi ajax
+                $.ajax({
+                    type: "DELETE",
+                    //tên API
+                    url: `/phones/${phoneId}`,
+                    //xử lý khi thành công
+                    success: function (data) {
+                        a.parent().parent().remove();
+                    }
+
+                });
+                //chặn sự kiện mặc định của thẻ
+                event.preventDefault();
+            });
+        })
+
+        function updatePhone() {
+
+            let id = $('#id-input').val();
+            let producer = $('#producer-input').val();
+            let description = $('#description-input').val();
+            let price = $('#price-input').val();
+            let newPhone = {
+                id:id,
+                producer: producer,
+                description: description,
+                price: price
+            };
+            console.log(newPhone);
+            $.ajax({
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                contentType:'application/json;charset=utf-8',
+                type: "PUT",
+                data: JSON.stringify(newPhone),
+                url: `/phones/`+id,
+                success: function (data) {
+                    location.reload();
+                    console.log(data)
+                    // let producer = $('#producer-input').val('');
+                    // let description = $('#description-input').val('');
+                    // let price = $('#price-input').val();
+                }
+
+            });
+
+            event.preventDefault();
+        }
+
+        $(document).ready(function () {
+            $('.editPhone').click(function (event) {
+                let a = $(this);
+                let phoneId = a.attr("href");
+                $('#id-input').val(phoneId);
+                let producer = $('#producer-input');
+                producer.val(a.parent().parent().children()[0].innerText);
+                let description = $('#description-input');
+                description.val(a.parent().parent().children()[1].innerText);
+                let price = $('#price-input');
+                price.val(a.parent().parent().children()[2].innerText);
+                let inputForm = $('#input-form');
+                inputForm.attr("display","block");
+                // $.ajax({
+                //     type: "PUT",
+                //     url: `/phones/${phoneId}`,
+                //     success: successHandler
+                // });
+                event.preventDefault();
+            });
+        })
+
+    </script>
+
+</head>
+<body>
+<form id="add-phone">
+    <table class="table">
+        <tr>
+            <td>Producer:</td>
+            <td><input type="text" id="producer" placeholder="producer"></td>
+        </tr>
+        <tr>
+            <td>Description:</td>
+            <td><input type="text" id="description" placeholder="description"></td>
+        </tr>
+        <tr>
+            <td>Price:</td>
+            <td><input type="text" id="price" placeholder="price"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Add" onclick="addNewPhone()"></td>
+        </tr>
+    </table>
+</form>
+<h1>Phone List</h1>
+<table id="phoneList" class="table" >
+    <tr>
+        <td>Producer</td>
+        <td>Description</td>
+        <td>Price</td>
+        <td>Delete</td>
+    </tr>
+    <th:block th:each="phone: ${phones}">
+        <tr>
+            <td th:text="${phone.producer}"></td>
+            <td th:text="${phone.description}"></td>
+            <td th:text="${phone.price}"></td>
+            <td><a class="deletePhone" th:href="${phone.getId()}">Delete</a>
+                <input type="button" class="editPhone" th:href="${phone.getId()}" value="Edit"></td>
+        </tr>
+    </th:block>
+</table>
+<form id="input-form">
+    <input type="hidden" id="id-input" >
+    <input type="text" id="producer-input" >
+    <input type="text" id="description-input" >
+    <input type="text" id="price-input" >
+    <input type="button" value="Save" onclick="updatePhone()">
+</form>
+</body>
+</html>

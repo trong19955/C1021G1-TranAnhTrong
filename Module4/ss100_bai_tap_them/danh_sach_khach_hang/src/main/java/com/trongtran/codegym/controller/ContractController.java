@@ -98,7 +98,7 @@ public class ContractController {
             Contract contract = new Contract();
             BeanUtils.copyProperties(contractDto,contract);
             this.iContractService.save(contract);
-            return "redirect:/contract/";
+            return "redirect:/contract";
         }
 
     }

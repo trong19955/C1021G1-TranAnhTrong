@@ -1,13 +1,15 @@
-package com.trongtran.codegym.service;
+package com.trongtran.codegym.service.impl;
 
 import com.trongtran.codegym.model.Contract;
 import com.trongtran.codegym.repository.IContractRepository;
+import com.trongtran.codegym.service.IContractService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+
 
 @Service
 public class ContractService implements IContractService {

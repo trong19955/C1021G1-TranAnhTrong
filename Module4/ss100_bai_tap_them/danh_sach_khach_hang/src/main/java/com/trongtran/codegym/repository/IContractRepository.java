@@ -11,8 +11,6 @@ public interface IContractRepository extends JpaRepository<Contract,Integer> {
 
     Page<Contract> findByCustomer_CustomerName(String customerName, Pageable pageable);
 
-    Page<Contract> findByServiceType_ServiceTypeId(Integer serviceTypeId, Pageable pageable);
-
     Page<Contract> findByCustomer_CustomerNameAndServiceType_ServiceTypeId(String customerName, Integer serviceTypeId, Pageable pageable);
 
 }

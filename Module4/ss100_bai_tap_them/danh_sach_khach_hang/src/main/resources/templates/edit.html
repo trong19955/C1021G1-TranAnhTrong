@@ -101,7 +101,12 @@
                             <label for="customerId" class="form-label">Customer: </label><br>
 
                             <select th:field="*{customer.customerId}" id="customerId">
-                                <option th:each="customer : ${customers}" th:value="${customer.customerId}" th:text="${customer.customerName}" th:selected="${customer.customerId} == ${contract.customer.customerId}"></option>
+                                <option th:each="customer : ${customers}"
+                                        th:value="${customer.customerId}"
+                                        th:text="${customer.customerName}"
+                                        th:selected="${customer.customerId} == ${contract.customer.customerId}">
+
+                                </option>
                             </select>
                         </div>
 
@@ -114,7 +119,12 @@
                             <label for="serviceTypeId" class="form-label">Service Type: </label><br>
 
                             <select th:field="*{serviceType.serviceTypeId}" id="serviceTypeId">
-                                <option th:each="serviceType : ${serviceTypes}" th:value="${serviceType.serviceTypeId}" th:text="${serviceType.serviceTypeName}" th:selected="${serviceType.serviceTypeId} == ${contract.serviceType.serviceTypeId}"></option>
+                                <option th:each="serviceType : ${serviceTypes}"
+                                        th:value="${serviceType.serviceTypeId}"
+                                        th:text="${serviceType.serviceTypeName}"
+                                        th:selected="${serviceType.serviceTypeId} == ${contract.serviceType.serviceTypeId}">
+
+                                </option>
                             </select>
                         </div>
 

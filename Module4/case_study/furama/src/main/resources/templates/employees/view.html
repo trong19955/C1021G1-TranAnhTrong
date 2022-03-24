@@ -45,36 +45,20 @@
         <label><b> Address: </b></label>
         <label th:text="${employee.employeeAddress}"></label>
     </div>
-    <div class="mb-3">
-        <label for="position" class="form-label">Position: </label><br>
-        <select th:field="*{position}" id="position">
-            <option th:each="positions : ${position}"
-                    th:value="${positions.positionId}"
-                    th:text="${positions.positionName}"
-                    th:selected="${positions.positionId} == ${employee.position.positionId}">
-            </option>
-        </select>
-    </div>
-    <div class="mb-3">
-        <label for="educationDegree" class="form-label">Education Degree: </label><br>
-        <select th:field="*{educationDegree}" id="educationDegree">
-            <option th:each="educationDegrees : ${educationDegree}"
-                    th:value="${educationDegrees.educationDegreeId}"
-                    th:text="${educationDegrees.educationDegreeName}"
-                    th:selected="${educationDegrees.educationDegreeId} == ${employee.educationDegree.educationDegreeId}">
-            </option>
-        </select>
-    </div>
-    <div class="mb-3">
-        <label for="divisionId" class="form-label">Customer: </label><br>
-        <select th:field="*{division}" id="divisionId">
-            <option th:each="divisions : ${division}"
-                    th:value="${divisions.divisionId}"
-                    th:text="${divisions.divisionName}"
-                    th:selected="${divisions.divisionId} == ${employee.division.divisionId}">
-            </option>
-        </select>
-    </div>
+    <label class="mb-3">
+        <label for="position" class="form-label">Type Customer: </label>
+        <input type="text" class="form-control" id="position" th:field="*{employee.position.positionName}">
+    </label>
+<br>
+    <label class="mb-3">
+        <label for="educationDegree" class="form-label">Type Customer: </label>
+        <input type="text" class="form-control" id="educationDegree" th:field="*{employee.educationDegree.educationDegreeName}">
+    </label>
+    <br>
+    <label class="mb-3">
+        <label for="divisionId" class="form-label">Type Customer: </label>
+        <input type="text" class="form-control" id="divisionId" th:field="*{employee.division.divisionName}">
+    </label>
 </label>
 <!--private String employeeBirthday;-->
 <!--private String employeeIdCard;-->

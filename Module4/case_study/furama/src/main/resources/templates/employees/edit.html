@@ -78,7 +78,7 @@
         <div class="col-xl-11">
             <div class="row">
                 <div class="col-xl-12">
-                    <form method="post" th:action="@{/update}" th:object="${employee}" id="employee-form">
+                    <form method="post" th:action="@{/update-employee}" th:object="${employee}" id="employee-form">
                         <input type="hidden" th:field="*{employeeId}">
                         <div class="mb-3">
                             <label for="employeeName" class="form-label">Name: </label>

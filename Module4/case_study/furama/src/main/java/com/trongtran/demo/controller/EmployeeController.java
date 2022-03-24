@@ -75,7 +75,7 @@ public class EmployeeController {
 
     }
 
-    @GetMapping("/delete/{id}")
+    @GetMapping("/delete-employee/{id}")
     public ModelAndView showDelete(@PathVariable Integer id) {
         Employee employee = iEmployeeService.findById(id);
         ModelAndView modelAndView = new ModelAndView("employees/delete");
@@ -92,7 +92,7 @@ public class EmployeeController {
         return "redirect:/employee";
     }
 
-    @GetMapping( "/edit/{id}")
+    @GetMapping( "/edit-employee/{id}")
     public String showEdit(@PathVariable Integer id, Model model){
         Optional<Employee> employeeOptional = Optional.ofNullable(this.iEmployeeService.findById(id));
 
@@ -107,7 +107,7 @@ public class EmployeeController {
             return "error.404";
         }
     }
-    @PostMapping( "/update")
+    @PostMapping( "/update-employee")
     public String editEmployee(@ModelAttribute(name = "employee") Employee employee, RedirectAttributes redirectAttributes){
         this.iEmployeeService.save(employee);
         redirectAttributes.addFlashAttribute("message","successfully update");
@@ -118,7 +118,7 @@ public class EmployeeController {
         model.addAttribute("employeeList",iEmployeeService.findByEmployee_EmployeeName(name, pageable));
         return "/employees/list";
     }
-    @GetMapping("/view/{id}")
+    @GetMapping("/view-employee/{id}")
     public String view(@PathVariable Integer id, Model model) {
         model.addAttribute("employee", iEmployeeService.findById(id));
         model.addAttribute("division", iDivisionService.findAll());

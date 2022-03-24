@@ -107,6 +107,7 @@
                             <td scope="col">Customer Type Name:</td>
                             <td scope="col">edit</td>
                             <td scope="col">Delete</td>
+                            <td scope="col">Action</td>
                         </tr>
                         </thead>
                         <tbody>
@@ -130,8 +131,9 @@
                             <td th:text="${customers.emailCustomer}"></td>
                             <td th:text="${customers.addressCustomer}"></td>
                             <td th:text="${customers.customerType.nameCustomerType}"></td>
-                            <td><a  th:href="@{edit/__${customers.idCustomer}__}" class="text-dark text-decoration-none btn btn-primary">edit</a></td>
+                            <td><a  th:href="@{edit-customer/__${customers.idCustomer}__}" class="text-dark text-decoration-none btn btn-primary">edit</a></td>
                             <td><a  th:href="@{delete-customer/__${customers.idCustomer}__}" class="text-dark text-decoration-none btn btn-danger">delete</a></td>
+                            <td><a  th:href="@{view-customer/__${customers.idCustomer}__}" class="text-dark text-decoration-none btn btn-info">View</a></td>
                         </tr>
                         </tbody>
                     </table>

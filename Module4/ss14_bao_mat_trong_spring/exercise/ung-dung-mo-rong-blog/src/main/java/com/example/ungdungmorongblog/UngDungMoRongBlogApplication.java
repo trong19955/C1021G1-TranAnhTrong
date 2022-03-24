@@ -11,6 +11,7 @@ public class UngDungMoRongBlogApplication {
         SpringApplication.run(UngDungMoRongBlogApplication.class, args);
 //        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 //        System.out.println(passwordEncoder.encode("123456"));
+
     }
 }
 

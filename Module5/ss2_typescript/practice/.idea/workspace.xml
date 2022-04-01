@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="561a36b0-0bd6-4867-bcfe-7d537874dd66" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/resources/templates/login/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/resources/templates/services/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/final/final_module/src/main/java/com/example/demo/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/final/final_module/src/main/java/com/example/demo/dto/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/final/final_module/src/main/java/com/example/demo/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/final/final_module/src/main/java/com/example/demo/model/Type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/final/final_module/src/main/java/com/example/demo/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/final/final_module/src/main/java/com/example/demo/repository/ITypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/final/final_module/src/main/java/com/example/demo/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/final/final_module/src/main/java/com/example/demo/service/ITypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/final/final_module/src/main/java/com/example/demo/service/impl/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/final/final_module/src/main/java/com/example/demo/service/impl/TypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/final/final_module/src/main/resources/templates/products/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/final/final_module/src/main/resources/templates/products/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/final/final_module/src/main/resources/templates/products/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/final/final_module/src/main/resources/templates/products/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/transaction/src/main/java/com/example/demo/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/transaction/src/main/java/com/example/demo/dto/TransactionDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/transaction/src/main/java/com/example/demo/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/transaction/src/main/java/com/example/demo/model/Type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/transaction/src/main/java/com/example/demo/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/transaction/src/main/java/com/example/demo/repository/ITypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/transaction/src/main/java/com/example/demo/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/transaction/src/main/java/com/example/demo/service/ITypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/transaction/src/main/java/com/example/demo/service/impl/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/transaction/src/main/java/com/example/demo/service/impl/TypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/transaction/src/main/resources/templates/error.404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/transaction/src/main/resources/templates/products/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/transaction/src/main/resources/templates/products/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/transaction/src/main/resources/templates/products/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/transaction/src/main/resources/templates/products/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/transaction/src/main/resources/templates/products/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/java/com/trongtran/demo/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/java/com/trongtran/demo/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/java/com/trongtran/demo/controller/ServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/java/com/trongtran/demo/controller/ServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/java/com/trongtran/demo/dto/EmployeeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/java/com/trongtran/demo/dto/EmployeeDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/resources/templates/customers/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/resources/templates/customers/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/resources/templates/employees/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/resources/templates/employees/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/resources/templates/employees/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/resources/templates/employees/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/resources/templates/employees/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/resources/templates/employees/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/case_study/furama/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/danh_sach_khach_hang/src/main/java/com/trongtran/codegym/repository/IContractRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/danh_sach_khach_hang/src/main/java/com/trongtran/codegym/repository/IContractRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/danh_sach_khach_hang/src/main/java/com/trongtran/codegym/service/impl/ContractService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/ss100_bai_tap_them/danh_sach_khach_hang/src/main/java/com/trongtran/codegym/service/impl/ContractService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/ss3_spring_databinding_and_form/exercise/thu_dien_tu/.gradle/6.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/ss3_spring_databinding_and_form/exercise/thu_dien_tu/.gradle/6.7/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/ss3_spring_databinding_and_form/exercise/thu_dien_tu/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/ss3_spring_databinding_and_form/exercise/thu_dien_tu/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/ss3_spring_databinding_and_form/exercise/thu_dien_tu/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/ss3_spring_databinding_and_form/exercise/thu_dien_tu/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4/ss8_validation/exercise/validate_form_quang_cao/src/main/java/com/codegym/validation/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4/ss8_validation/exercise/validate_form_quang_cao/src/main/java/com/codegym/validation/dto/UserDto.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="27A5z3AKQmXq9wqoHO3DracZpnP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="561a36b0-0bd6-4867-bcfe-7d537874dd66" name="Changes" comment="" />
+      <created>1648750308838</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648750308838</updated>
+      <workItem from="1648750310000" duration="265000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

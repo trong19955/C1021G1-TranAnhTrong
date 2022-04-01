@@ -44,7 +44,7 @@ public class ContractService implements IContractService {
 
     @Override
     public Page<Contract> findByServiceType_ServiceTypeId(Integer serviceTypeId, Pageable pageable) {
-        return this.iContractRepository.findByServiceType_ServiceTypeId(serviceTypeId, pageable);
+        return iContractRepository.findByServiceType_ServiceTypeId(serviceTypeId, pageable);
     }
 
     @Override

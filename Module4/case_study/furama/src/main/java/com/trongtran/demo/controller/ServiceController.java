@@ -24,7 +24,7 @@ public class ServiceController {
     private IRentTypeService iRentTypeService;
 
     @GetMapping("/service")
-    public ModelAndView home(@PageableDefault(value = 3, sort = "idCustomer", direction = Sort.Direction.ASC) Pageable pageable) {
+    public ModelAndView home(@PageableDefault(value = 3, sort = "serviceId", direction = Sort.Direction.ASC) Pageable pageable) {
         Page<Service> services = iService.findAll(pageable);
         ModelAndView modelAndView = new ModelAndView("services/list");
         modelAndView.addObject("list", "ok");

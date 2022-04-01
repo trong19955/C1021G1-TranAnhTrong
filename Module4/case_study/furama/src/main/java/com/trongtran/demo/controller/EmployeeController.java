@@ -20,8 +20,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.Optional;
-
 @Controller
 public class EmployeeController {
     @Autowired
@@ -64,6 +62,9 @@ public class EmployeeController {
     public String save(@Validated @ModelAttribute("employee") EmployeeDto employeeDto, BindingResult bindingResult, Model model) {
         new EmployeeDto().validate(employeeDto, bindingResult);
         if (bindingResult.hasFieldErrors()) {
+            model.addAttribute("division", iDivisionService.findAll());
+            model.addAttribute("educationDegree", iEducationDegreeService.findAll());
+            model.addAttribute("position", iPositionService.findAll());
             return "employees/create";
         } else {
             Employee employee = new Employee();
@@ -85,6 +86,7 @@ public class EmployeeController {
         modelAndView.addObject("position", iPositionService.findAll());
         return modelAndView;
     }
+
     @PostMapping("/delete-employee")
     public String delete(Employee employee, RedirectAttributes redirectAttributes) {
         iEmployeeService.remove(employee.getEmployeeId());
@@ -92,32 +94,47 @@ public class EmployeeController {
         return "redirect:/employee";
     }
 
-    @GetMapping( "/edit-employee/{id}")
-    public String showEdit(@PathVariable Integer id, Model model){
-        Optional<Employee> employeeOptional = Optional.ofNullable(this.iEmployeeService.findById(id));
-
-        if(employeeOptional.isPresent()) {
-            model.addAttribute("employee", employeeOptional.get());
+    @GetMapping("/edit-employee/{id}")
+    public String showEdit(@PathVariable Integer id, Model model) {
+        Employee employee = iEmployeeService.findById(id);
+        EmployeeDto employeeDto = new EmployeeDto();
+        BeanUtils.copyProperties(employee, employeeDto);
+        if (employee != null) {
+            model.addAttribute("employee", employeeDto);
             model.addAttribute("division", iDivisionService.findAll());
             model.addAttribute("educationDegree", iEducationDegreeService.findAll());
             model.addAttribute("position", iPositionService.findAll());
 
             return "employees/edit";
-        }else {
+        } else {
             return "error.404";
         }
     }
-    @PostMapping( "/update-employee")
-    public String editEmployee(@ModelAttribute(name = "employee") Employee employee, RedirectAttributes redirectAttributes){
-        this.iEmployeeService.save(employee);
-        redirectAttributes.addFlashAttribute("message","successfully update");
-        return "redirect:/employee";
+
+    @PostMapping("/update-employee")
+    public String editEmployee(@Validated @ModelAttribute(name = "employee") EmployeeDto employeeDto, BindingResult bindingResult, Model model) {
+        Employee employee = new Employee();
+        BeanUtils.copyProperties(employeeDto, employee);
+
+        if (bindingResult.hasFieldErrors()) {
+            model.addAttribute("division", iDivisionService.findAll());
+            model.addAttribute("educationDegree", iEducationDegreeService.findAll());
+            model.addAttribute("position", iPositionService.findAll());
+            return "employees/edit";
+        }else {
+            this.iEmployeeService.save(employee);
+            model.addAttribute("message", "successfully update");
+            return "redirect:/employee";
+        }
+
     }
+
     @GetMapping("/search")
-    public String search(@RequestParam (name="employeeName",required = false)String name, @PageableDefault(value = 3, sort = "employeeId", direction = Sort.Direction.ASC) Pageable pageable, Model model ){
-        model.addAttribute("employeeList",iEmployeeService.findByEmployee_EmployeeName(name, pageable));
+    public String search(@RequestParam(name = "employeeName", required = false) String name, @PageableDefault(value = 3, sort = "employeeId", direction = Sort.Direction.ASC) Pageable pageable, Model model) {
+        model.addAttribute("employeeList", iEmployeeService.findByEmployee_EmployeeName(name, pageable));
         return "/employees/list";
     }
+
     @GetMapping("/view-employee/{id}")
     public String view(@PathVariable Integer id, Model model) {
         model.addAttribute("employee", iEmployeeService.findById(id));

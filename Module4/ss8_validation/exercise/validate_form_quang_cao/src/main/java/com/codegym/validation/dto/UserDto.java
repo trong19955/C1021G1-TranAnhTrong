@@ -9,6 +9,7 @@ import javax.validation.constraints.Min;
 
 import javax.validation.constraints.Size;
 
+@Component
 public class UserDto implements Validator {
     private int id;
     @Size(min = 4,max = 45)

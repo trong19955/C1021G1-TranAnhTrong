@@ -1,0 +1,27 @@
+<h1> Employee LIST: </h1>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Id Customer</th>
+    <th scope="col">Name Customer</th>
+    <th scope="col">Age</th>
+    <th scope="col">Email Customer</th>
+    <th scope="col">Phone Customer</th>
+    <th scope="col">Gender Customer</th>
+    <th scope="col">Address Customer</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <tr *ngFor="let a of ListEmployeeComponent ">
+    <td><p>{{a.idCustomer}} </p></td>
+    <td><p>{{a.nameCustomer}} </p></td>
+    <td><p>{{a.age}} </p></td>
+    <td><p>{{a.emailCustomer}} </p></td>
+    <td><p>{{a.phoneCustomer}} </p></td>
+    <td><p>{{a.gender}} </p></td>
+    <td><p>{{a.address}} </p></td>
+  </tr>
+  </tbody>
+</table>
+

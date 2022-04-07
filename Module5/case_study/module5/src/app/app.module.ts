@@ -10,6 +10,8 @@ import { ListCustomerComponent } from './customer/list-customer/list-customer.co
 import { AppRoutingModule} from "./app-routing.module";
 import { ListEmployeeComponent } from './employee/list-employee/list-employee.component';
 import { ListServiceComponent } from './service/list-service/list-service.component';
+import { ViewComponent } from './customer/view/view.component';
+import { ListContractComponent } from './contract/list-contract/list-contract.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { ListServiceComponent } from './service/list-service/list-service.compon
     ListCustomerComponent,
     ListEmployeeComponent,
     ListServiceComponent,
+    ViewComponent,
+    ListContractComponent,
 
   ],
   imports: [

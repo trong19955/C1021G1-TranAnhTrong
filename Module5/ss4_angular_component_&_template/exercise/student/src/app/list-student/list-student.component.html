@@ -1,0 +1,34 @@
+<h1>List Student</h1>
+<table class="table table-dark table-striped">
+  <thead>
+  <tr>
+    <th scope="col">id</th>
+    <th scope="col">name</th>
+    <th scope="col">age</th>
+    <th scope="col">email</th>
+    <th scope="col">address</th>
+    <th scope="col">mark</th>
+    <th scope="col">detail</th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let student of students">
+    <td>{{student.id}}</td>
+    <td>{{student.name | titlecase}}</td>
+    <td>{{student.age}}</td>
+    <td>{{student.email}}</td>
+    <td>{{student.address}}</td>
+    <td>{{student.mark}}</td>
+    <td *ngIf="student.mark < 6;else elseBlock" class="text-danger">Fail</td>
+    <ng-template #elseBlock>
+      <td class="text-success">Pass</td>
+    </ng-template>
+    <td>
+      <a class="btn btn-success m-2" (click)="getStudent(student)">detail</a>
+      <a class="btn btn-danger m-2">Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<app-view-student *ngIf="students" [students]="student" ></app-view-student>

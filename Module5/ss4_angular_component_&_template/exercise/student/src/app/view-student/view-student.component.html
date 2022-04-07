@@ -1,0 +1,15 @@
+<h1>view customer</h1>
+<div class="table table-striped" *ngIf="students">
+  <tr>
+  <td>id : {{students.id}}</td>
+  <td>name : {{students.name}}</td>
+  <td>age : {{students.age}}</td>
+  <td>email : {{students.email}}</td>
+  <td>address : {{students.address}}</td>
+  <td>mark : {{students.mark}}</td>
+  </tr>
+  <br>
+  <button (click)="addPoint()">Add Point</button>
+  <button (click)="reductionPoint()">Reduction Point</button>
+</div>
+

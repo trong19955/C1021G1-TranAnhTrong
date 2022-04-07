@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {IListCustomer} from "./IListCustomer";
+import {CustomerService} from "../customerService/customerService";
 
 @Component({
   selector: 'app-list-customer',
@@ -7,41 +8,14 @@ import {IListCustomer} from "./IListCustomer";
   styleUrls: ['./list-customer.component.css']
 })
 export class ListCustomerComponent implements OnInit {
-ListCustomerComponent: IListCustomer[] =[{
-  idCustomer: 1,
-  nameCustomer:'Trần Anh Trọng',
-  age:18,
-  emailCustomer:'trong@gmail.com',
-  phoneCustomer:'0981967705',
-  gender:'NAM',
-  address:'146/58 Phan Van dinh'
-},
-{idCustomer: 2,
-  nameCustomer:'Trần Anh Trọng',
-  age:18,
-  emailCustomer:'trong@gmail.com',
-  phoneCustomer:'0981967705',
-  gender:'NAM',
-  address:'146/58 Phan Van dinh'
-},
-  {idCustomer: 3,
-    nameCustomer:'Trần Anh Trọng',
-    age:18,
-    emailCustomer:'trong@gmail.com',
-    phoneCustomer:'0981967705',
-    gender:'NAM',
-    address:'146/58 Phan Van dinh'
-  },
-  {idCustomer: 4,
-    nameCustomer:'Trần Anh Trọng',
-    age:18,
-    emailCustomer:'trong@gmail.com',
-    phoneCustomer:'0981967705',
-    gender:'NAM',
-    address:'146/58 Phan Van dinh'
-  }]
+  customerList: IListCustomer[] = CustomerService.customerList;
 
-  constructor() { }
+
+  // constructor(private customerService: CustomerService) {
+  //   this.customerList = this.customerService.customerList;
+  // }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

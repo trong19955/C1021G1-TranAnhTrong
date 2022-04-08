@@ -42,9 +42,11 @@ export class RegistrationComponent implements OnInit {
   get age() {
     return this.registrationForm.get('age');
   }
-get phone(){
+
+  get phone() {
     return this.registrationForm.get('phone');
-}
+  }
+
   constructor() {
   }
 

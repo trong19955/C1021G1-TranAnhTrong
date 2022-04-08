@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cef07d06-5cc9-4c30-b0f2-067b59853621" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/contract/list-contract/IContract.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/contract/list-contract/list-contract.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/contract/list-contract/list-contract.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/contract/list-contract/list-contract.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/contract/list-contract/list-contract.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/customer/customerService/customerService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/customer/list-customer/IListCustomer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/customer/list-customer/list-customer.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/customer/list-customer/list-customer.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/customer/list-customer/list-customer.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/customer/list-customer/list-customer.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/customer/view/view.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/customer/view/view.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/customer/view/view.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/customer/view/view.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/employee/list-employee/IEmployee.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/employee/list-employee/list-employee.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/employee/list-employee/list-employee.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/employee/list-employee/list-employee.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/employee/list-employee/list-employee.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/home/body/body.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/home/body/body.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/home/body/body.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/home/body/body.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/home/footer/footer.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/home/footer/footer.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/home/footer/footer.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/home/footer/footer.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/home/header/header.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/home/header/header.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/home/header/header.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/home/header/header.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/home/home.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/home/home.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/home/home.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/home/home.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/service/list-service/list-service.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/service/list-service/list-service.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/service/list-service/list-service.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../new-case-study/src/app/service/list-service/list-service.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/module5/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/module5/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/module5/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/module5/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/module5/src/app/customer/list-customer/list-customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/module5/src/app/customer/list-customer/list-customer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/module5/src/app/customer/list-customer/list-customer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/module5/src/app/customer/list-customer/list-customer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/module5/src/app/customer/view/view.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/module5/src/app/customer/view/view.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/module5/src/app/customer/view/view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/module5/src/app/customer/view/view.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_angular_component_&amp;_template/exercise/student/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss4_angular_component_&amp;_template/exercise/student/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_angular_component_&amp;_template/exercise/student/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss4_angular_component_&amp;_template/exercise/student/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_angular_component_&amp;_template/exercise/student/src/app/list-student/StudentDao.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss4_angular_component_&amp;_template/exercise/student/src/app/list-student/StudentDao.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_angular_component_&amp;_template/exercise/student/src/app/list-student/list-student.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss4_angular_component_&amp;_template/exercise/student/src/app/list-student/list-student.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss4_angular_component_&amp;_template/exercise/student/src/app/list-student/list-student.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss4_angular_component_&amp;_template/exercise/student/src/app/list-student/list-student.component.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="27VN5SGDehS7XGF0EsAuc6liMnL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cef07d06-5cc9-4c30-b0f2-067b59853621" name="Changes" comment="" />
+      <created>1649401109525</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649401109525</updated>
+      <workItem from="1649401110737" duration="2000" />
+    </task>
+    <servers />
+  </component>
+</project>

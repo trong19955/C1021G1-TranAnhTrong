@@ -1,0 +1,106 @@
+<h1>Register Component</h1>
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="mb-3">
+    <label for="email" class="form-label"> Email</label>
+    <input type="text" class="form-control" id="email" name="email" formControlName="email" placeholder="enter email">
+  </div>
+
+  <div *ngIf="!email.valid&&(email.dirty||email.touched)">
+    <div [hidden]="!email.errors.pattern">
+      <p style="color: red">email is pattern</p></div>
+  </div>
+
+  <div formGroupName="groupPassword">
+    <div class="mb-3">
+      <label for="password" class="form-label">Password: </label>
+      <input type="password" class="form-control" id="password" name="password" formControlName="password">
+    </div>
+
+    <div class="mb-3 text-danger"
+         *ngIf="registrationForm.get('groupPassword').get('password').hasError('required') &&
+                  (registrationForm.get('groupPassword').get('password').dirty || registrationForm.get('groupPassword').get('password').touched)">
+      Please type password!
+    </div>
+
+    <div class="mb-3 text-danger"
+         *ngIf="registrationForm.get('groupPassword').get('password').hasError('minlength') &&
+                  (registrationForm.get('groupPassword').get('password').dirty || registrationForm.get('groupPassword').get('password').touched)">
+      Password should be greater than 6 characters!
+    </div>
+
+    <div class="mb-3">
+      <label for="confirmPassword" class="form-label">Confirm Password: </label>
+      <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+             formControlName="confirmPassword">
+    </div>
+
+    <div class="mb-3 text-danger"
+         *ngIf="registrationForm.get('groupPassword').get('confirmPassword').hasError('required') &&
+                  (registrationForm.get('groupPassword').get('confirmPassword').dirty || registrationForm.get('groupPassword').get('confirmPassword').touched)">
+      Please type password to confirm!
+    </div>
+
+    <div class="mb-3 text-danger"
+         *ngIf="registrationForm.get('groupPassword').get('confirmPassword').hasError('minlength') &&
+                  (registrationForm.get('groupPassword').get('confirmPassword').dirty || registrationForm.get('groupPassword').get('confirmPassword').touched)">
+      Password should be greater than 6 characters!
+    </div>
+
+    <div class="mb-3 text-danger"
+         *ngIf="registrationForm.get('groupPassword').hasError('notConfirm') &&
+                  (registrationForm.get('groupPassword').get('confirmPassword').dirty || registrationForm.get('groupPassword').get('confirmPassword').touched)">
+      Please type password you wrote!
+    </div>
+
+  </div>
+  <div class="mb-3">
+    <label for="country" class="form-label"> Country</label>
+    <input type="text" class="form-control" id="country" name="country" formControlName="country">
+  </div>
+
+
+  <div *ngIf="!country.valid&&(country.dirty||country.touched)">
+    <div [hidden]="!country.errors.required">
+      <p style="color: red">country is pattern</p></div>
+  </div>
+
+
+  <div class="mb-3">
+    <label for="age" class="form-label"> Age</label>
+    <input type="text" class="form-control" id="age" name="age" formControlName="age">
+  </div>
+
+  <div *ngIf="!age.valid&&(age.dirty||age.touched)">
+    <div [hidden]="!age.errors.min">
+      <p style="color: red">không cho trẻ em dưới 18 tuổi</p></div>
+  </div>
+  <div class="mb-3">
+    <label>Gender: </label>
+    <div class="form-check">
+      <label class="form-label"> Gender</label>
+      <input type="radio" class="form-check-input" id="gender" name="gender" formControlName="gender" value="male">
+      <label class="form-check-label" for="gender">
+        Male
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-label"> Gender</label>
+      <input type="radio" class="form-check-input" id="gender1" name="gender" formControlName="gender" value="female">
+      <label class="form-check-label" for="gender1">
+        Female
+      </label>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label"> phone</label>
+    <input type="text" class="form-control" id="phone" name="phone" formControlName="phone">
+  </div>
+  <div *ngIf="!phone.valid&&(phone.dirty||phone.touched)">
+    <div [hidden]="!phone.errors.pattern">
+      <p style="color: red">phone is not pattern</p></div>
+  </div>
+  <p>
+    <button class="btn-primary" type="submit" [disabled]="!registrationForm.valid">Submit</button>
+  </p>
+</form>
+

@@ -1,5 +1,8 @@
 import {IStudent} from "./IStudent";
-
+import {Injectable} from "@angular/core";
+@Injectable({
+  providedIn:'root'
+})
 export class StudentDao{
 public static students: IStudent[] =[{
   id : 1,
@@ -34,5 +37,11 @@ public static students: IStudent[] =[{
     mark: 1
   },
 ]
+
+
+
+  addStudent(student: IStudent){
+  StudentDao.students.push(student)
+  }
 }
 

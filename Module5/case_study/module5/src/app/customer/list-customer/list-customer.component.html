@@ -24,7 +24,7 @@
     <td><p>{{a.gender}} </p></td>
     <td><p>{{a.address}} </p></td>
     <td>
-      <a routerLink="/view/{{a.idCustomer}}" class="btn btn-success m-2">Detail</a>
+      <a routerLink="/view/{{a.idCustomer}}" (click)="viewCustomer(CustomerList())" class="btn btn-success m-2">Detail</a>
       <a  class="btn btn-danger m-2">Delete</a>
       <a  class="btn btn-warning m-2">Edit</a>
     </td>

@@ -1,0 +1,63 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "customerList": [
+    {
+      "idCustomer": 1,
+      "nameCustomer":"Trần Anh Trọng",
+      "age":18,
+      "emailCustomer":"trong@gmail.com",
+     " phoneCustomer":"0981967705",
+      "gender":"NAM",
+      "address":"146/58 Phan Van dinh",
+      "customerType": {
+        "id": 3,
+        "name": "silver"
+      }},
+
+    {
+      "idCustomer": 2,
+      "nameCustomer":"Trần Anh Trọng",
+      "age":18,
+      "emailCustomer":"trong@gmail.com",
+      " phoneCustomer":"0981967705",
+      "gender":"NAM",
+      "address":"146/58 Phan Van dinh",
+      "customerType": {
+        "id": 2,
+        "name": "gold"
+      }
+    },
+    {
+      "idCustomer": 3,
+      "nameCustomer":"Trần Anh Trọng",
+      "age":18,
+      "emailCustomer":"trong@gmail.com",
+      " phoneCustomer":"0981967705",
+      "gender":"NAM",
+      "address":"146/58 Phan Van dinh",
+      "customerType": {
+        "id": 1,
+        "name": "dinamond"
+      }
+    }
+  ],
+  "customerTypeList": [{
+    "id": "1",
+    "name": "dinamond"
+  },
+{
+  "id": "2",
+  "name": "gold"
+},
+    {
+      "id": "3",
+      "name": "silver"
+    }]
+
+}

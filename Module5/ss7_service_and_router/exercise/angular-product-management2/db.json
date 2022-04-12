@@ -1,0 +1,72 @@
+{
+  "productList": [
+    {
+      "id": 1,
+      "name": "IPhone 12",
+      "price": 2400000,
+      "description": "New",
+      "category": {
+        "id": 1,
+        "name": "Iphone"
+      }
+    },
+    {
+      "id": 2,
+      "name": "IPhone 11",
+      "price": 1560000,
+      "description": "Like new",
+      "category": {
+        "id": 1,
+        "name": "Iphone"
+      }
+    },
+    {
+      "name": "IPhone 8 Pro Max",
+      "price": 7540000,
+      "description": "98%",
+      "category": {
+        "name": "Iphone"
+      },
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "IPhone 11 Pro",
+      "price": 1895000,
+      "description": "Like new",
+      "category": {
+        "id": 1,
+        "name": "Iphone"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Samsung Galaxy",
+      "price": 25000000,
+      "description": "Like new",
+      "category": {
+        "id": 2,
+        "name": "Samsung"
+      }
+    },
+    {
+      "name": "Iphone15",
+      "price": 80000000,
+      "description": "Newest Version of Iphone",
+      "category": {
+        "name": "Iphone"
+      },
+      "id": 9
+    },
+    {
+      "name": "Nokia 1080",
+      "price": 500000,
+      "description": "Wonderful",
+      "category": {
+        "id": null,
+        "name": "Nokia"
+      },
+      "id": 10
+    }
+  ]
+}

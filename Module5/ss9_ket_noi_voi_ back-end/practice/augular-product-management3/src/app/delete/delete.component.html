@@ -1,0 +1,9 @@
+<form [formGroup]="deleteForm" (ngSubmit)="delete(id)">
+  <label for="id">ID:</label><br>
+  <input type="text" id="id" name="fname" formControlName="id"><br>
+  <label for="name"> name:</label><br>
+  <input type="text" id="name" name="name" formControlName="name"><br><br>
+  <label for="price"> name:</label><br>
+  <input type="text" id="price" name="price" formControlName="price"><br><br>
+  <input type="submit" value="Submit">
+</form>

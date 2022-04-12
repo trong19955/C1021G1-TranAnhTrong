@@ -1,0 +1,20 @@
+<a routerLink="add">Thêm Mới</a>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>PRICE</th>
+    <th>Category</th>
+  </tr>
+  <tr *ngFor="let pd of productList">
+    <td>{{pd.id}}</td>
+    <td>{{pd.name}}</td>
+    <td>{{pd.price}}</td>
+    <td>{{pd.category.name}}</td>
+    <td>
+      <button [routerLink]="['/update/' +pd.id]" routerLinkActive="router-link-active">Update</button>
+      <button [routerLink]="['/delete/' +pd.id]" routerLinkActive="router-link-active">Delete</button>
+    </td>
+  </tr>
+</table>

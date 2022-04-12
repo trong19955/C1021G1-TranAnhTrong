@@ -29,7 +29,8 @@ ListEmployeeComponent : IEmployee[]=[{
     emailCustomer:'trong@gmail.com',
     phoneCustomer:'0981967705',
     gender:'NAM',
-    address:'146/58 Phan Van dinh'},{
+    address:'146/58 Phan Van dinh'},
+  {
     idCustomer: 4,
     nameCustomer:'Trần Anh Trọng',
     age:18,
@@ -43,5 +44,6 @@ ListEmployeeComponent : IEmployee[]=[{
 
   ngOnInit(): void {
   }
+
 
 }

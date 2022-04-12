@@ -1,42 +1,14 @@
-import {IListCustomer} from "../list-customer/IListCustomer";
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
+@Injectable({
+  providedIn: 'root'
+})
 export class CustomerService{
-   static customerList:IListCustomer[]=[
-    {
-      idCustomer: 1,
-      nameCustomer:'Trần Anh Trọng',
-      age:18,
-      emailCustomer:'trong@gmail.com',
-      phoneCustomer:'0981967705',
-      gender:'NAM',
-      address:'146/58 Phan Van dinh'
-    },
-    {idCustomer: 2,
-      nameCustomer:'Trần Anh Trọng',
-      age:18,
-      emailCustomer:'trong@gmail.com',
-      phoneCustomer:'0981967705',
-      gender:'NAM',
-      address:'146/58 Phan Van dinh'
-    },
-    {idCustomer: 3,
-      nameCustomer:'Trần Anh Trọng',
-      age:18,
-      emailCustomer:'trong@gmail.com',
-      phoneCustomer:'0981967705',
-      gender:'NAM',
-      address:'146/58 Phan Van dinh'
-    },
-    {idCustomer: 4,
-      nameCustomer:'Trần Anh Trọng',
-      age:18,
-      emailCustomer:'trong@gmail.com',
-      phoneCustomer:'0981967705',
-      gender:'NAM',
-      address:'146/58 Phan Van dinh'
-    }
-  ]
-
-
+  private readonly API_URL = 'http://localhost:3000/customerList';
+  private readonly TYPE_URL = 'http://localhost:3000/customerTypeList';
+  constructor(private https: HttpClient) {
+  }
+  
 
 }

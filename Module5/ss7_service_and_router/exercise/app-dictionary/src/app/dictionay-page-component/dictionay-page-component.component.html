@@ -1,0 +1,17 @@
+<h1>Dictionary English And Vietnamese</h1>
+<table>
+  <tr>
+    <td>id</td>
+    <td>word</td>
+    <td>mean</td>
+    <td>Detail</td>
+  </tr>
+  <tr *ngFor="let dictionary of dictionaries, let i = index " >
+    <td>{{i+1}}</td>
+    <td>{{dictionary.word}}</td>
+    <td>{{dictionary.mean}}</td>
+    <td>
+      <button routerLink="/dictionary/detail/{{dictionary.word}}">View</button>
+    </td>
+  </tr>
+</table>

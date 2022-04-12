@@ -1,0 +1,14 @@
+<form [formGroup]="updateForm" (ngSubmit)="update(id)">
+  <label for="id">ID:</label><br>
+  <input type="text" id="id" name="fname" formControlName="id"><br>
+  <label for="name"> name:</label><br>
+  <input type="text" id="name" name="name" formControlName="name"><br><br>
+  <label for="price"> name:</label><br>
+  <input type="text" id="price" name="price" formControlName="price"><br><br>
+  <select id="author_id" name="author_name" formControlName="category">
+
+    <option *ngFor="let ct of categoryList">{{ct.name}}</option>
+    <option *ngFor="let ct of categoryList" [ngValue]="ct">{{ct.name}}</option>
+  </select>
+  <input type="submit" value="Submit">
+</form>

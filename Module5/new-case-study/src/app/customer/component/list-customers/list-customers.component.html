@@ -1,0 +1,93 @@
+<div class="row">
+  <div class="col-xl-12">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Type Name</th>
+        <th scope="col">Date of Birth</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Identity Number</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Email</th>
+        <th scope="col">Address</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <tr *ngFor="let customer of customers | paginate: { itemsPerPage: 2, currentPage: p }">
+        <th scope="row">{{customer.id}}</th>
+        <td>{{customer.customerName}}</td>
+        <td>{{customer.customerType.customerTypeName}}</td>
+        <td>{{customer.dateOfBirth}}</td>
+        <td>{{customer.sex ?  'nam': 'nữ'}}</td>
+        <td>{{customer.identityNumber}}</td>
+        <td>{{customer.phoneNumber}}</td>
+        <td>{{customer.email}}</td>
+        <td>{{customer.address}}</td>
+
+        <td>
+          <button [routerLink]="['/customer/edit',customer.id]" class="btn btn-warning">Edit</button>
+        </td>
+
+        <td>
+          <a class="btn btn-danger" data-toggle="modal" data-target="#modalDelete"
+             (click)="getId(customer.id)">delete</a>
+        </td>
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body" id="modalDeleteCustomerContent">
+        Are you sure want to ID: {{idCustomer}}
+        <br><br>
+        delete customer ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="delete()">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col-xl-12">
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-plus"
+         viewBox="0 0 16 16">
+      <path
+        d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+      <path fill-rule="evenodd"
+            d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+    </svg>
+    <a routerLink="/customer/create" class="text-dark text-decoration-none fw-bold ms-2">Add new customer? Click
+      here!</a>
+  </div>
+</div>
+
+<!--      search k tao form-->
+<div class="mt-3 mb-3">
+
+  <div class="mb-3">
+    <label for="customerName" class="form-label">Customer Name: </label>
+    <input #customerName type="text" class="form-control" id="customerName" name="customerName"
+           placeholder="Type customer name">
+  </div>
+
+  <div class="mb-3">
+    <label for="address" class="form-label">Address: </label>
+    <input #address type="text" class="form-control" id="address" name="address" placeholder="Type address">
+  </div>
+
+  <input type="submit" value="Search" (click)="searchCustomer(customerName.value,address.value)">
+
+</div>
+
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

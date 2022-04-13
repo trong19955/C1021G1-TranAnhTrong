@@ -1,0 +1,169 @@
+<div class="row">
+  <div class="col-xl-12">
+    <form [formGroup]="customerForm" (ngSubmit)="updateCustomer()" class="mb-3">
+
+      <div class="mb-3">
+        <label for="id" class="form-label">Customer Id: </label>
+        <input type="text" class="form-control" id="id" name="id" formControlName="id">
+      </div>
+
+      <div class="mb-3 text-danger"
+           *ngIf="customerForm.get('id').hasError('required') &&
+                  (customerForm.get('id').dirty || customerForm.get('id').touched)">
+        Please type customer id!
+      </div>
+
+      <div class="mb-3 text-danger"
+           *ngIf="customerForm.get('id').hasError('pattern') &&
+                  (customerForm.get('id').dirty || customerForm.get('id').touched)">
+        Please type right format customer id!
+      </div>
+
+      <div class="mb-3">
+        <label for="customerType" class="form-label">Customer Type: </label><br>
+
+        <select id="customerType" name="customerType" formControlName="customerType">
+          <option *ngFor="let customerType of customerTypes" [ngValue]="customerType"
+                  [selected]="customerForm.controls.customerType.value.id === customerType.id">{{customerType.customerTypeName}}</option>
+        </select>
+      </div>
+
+
+      <div class="mb-3 text-danger"
+           *ngIf="customerForm.get('customerType').hasError('required') &&
+                  (customerForm.get('customerType').dirty || customerForm.get('customerType').touched)">
+        Please choose customer type!
+      </div>
+
+      <div class="mb-3">
+        <label for="customerName" class="form-label">Customer Name: </label>
+        <input type="text" class="form-control" id="customerName" name="customerName" formControlName="customerName">
+      </div>
+
+      <div class="mb-3 text-danger"
+           *ngIf="customerForm.get('customerName').hasError('required') &&
+                  (customerForm.get('customerName').dirty || customerForm.get('customerName').touched)">
+        Please type customer name!
+      </div>
+
+      <div class="mb-3">
+        <label for="dateOfBirth" class="form-label">Date Of Birth: </label>
+        <input type="text" class="form-control" id="dateOfBirth" name="dateOfBirth" formControlName="dateOfBirth">
+      </div>
+
+      <div class="mb-3 text-danger"
+           *ngIf="customerForm.get('dateOfBirth').hasError('required') &&
+                  (customerForm.get('dateOfBirth').dirty || customerForm.get('dateOfBirth').touched)">
+        Please type date of birth!
+      </div>
+
+      <div class="mb-3 text-danger"
+           *ngIf="customerForm.get('dateOfBirth').hasError('pattern') &&
+                  (customerForm.get('dateOfBirth').dirty || customerForm.get('dateOfBirth').touched)">
+        Please type right format date of birth!
+      </div>
+
+      <div class="mb-3 text-danger"
+           *ngIf="customerForm.get('dateOfBirth').hasError('not18YearsOld') &&
+                  (customerForm.get('dateOfBirth').dirty || customerForm.get('dateOfBirth').touched)">
+        Customer age greater than 18!
+      </div>
+
+      <div class="mb-3">
+
+        <label>Gender: </label>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="sex" id="sex1" formControlName="sex" value="false">
+          <label class="form-check-label" for="sex">
+            Male
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="sex" id="sex" formControlName="sex" value="true">
+          <label class="form-check-label" for="sex">
+            Female
+          </label>
+        </div>
+
+      </div>
+
+      <div class="mb-3 text-danger"
+           *ngIf="customerForm.get('sex').hasError('required') &&
+                  (customerForm.get('sex').dirty || customerForm.get('sex').touched)">
+        Please choose gender!
+      </div>
+
+      <div class="mb-3">
+        <label for="identityNumber" class="form-label">Identity Number: </label>
+        <input type="text" class="form-control" id="identityNumber" name="identityNumber" formControlName="identityNumber">
+      </div>
+
+      <div class="mb-3 text-danger"
+           *ngIf="customerForm.get('identityNumber').hasError('required') &&
+                  (customerForm.get('identityNumber').dirty || customerForm.get('identityNumber').touched)">
+        Please type identity number!
+      </div>
+
+      <div class="mb-3 text-danger"
+           *ngIf="customerForm.get('identityNumber').hasError('pattern') &&
+                  (customerForm.get('identityNumber').dirty || customerForm.get('identityNumber').touched)">
+        Please type right format of identity number!
+      </div>
+
+      <div class="mb-3">
+        <label for="phoneNumber" class="form-label">Phone Number: </label>
+        <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" formControlName="phoneNumber">
+      </div>
+
+      <div class="mb-3 text-danger"
+           *ngIf="customerForm.get('phoneNumber').hasError('required') &&
+                  (customerForm.get('phoneNumber').dirty || customerForm.get('phoneNumber').touched)">
+        Please type phone number!
+      </div>
+
+      <div class="mb-3 text-danger"
+           *ngIf="customerForm.get('phoneNumber').hasError('pattern') &&
+                  (customerForm.get('phoneNumber').dirty || customerForm.get('phoneNumber').touched)">
+        Please type right format of phone number!
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email: </label>
+        <input type="text" class="form-control" id="email" name="email" formControlName="email">
+      </div>
+
+      <div class="mb-3 text-danger"
+           *ngIf="customerForm.get('email').hasError('required') &&
+                  (customerForm.get('email').dirty || customerForm.get('email').touched)">
+        Please type email!
+      </div>
+
+
+      <div class="mb-3 text-danger"
+           *ngIf="customerForm.get('email').hasError('email') &&
+                  (customerForm.get('email').dirty || customerForm.get('email').touched)">
+        Please type right email format!
+      </div>
+
+      <div class="mb-3">
+        <label for="address" class="form-label">Address: </label>
+        <input type="text" class="form-control" id="address" name="address" formControlName="address">
+      </div>
+
+      <div class="mb-3 text-danger"
+           *ngIf="customerForm.get('address').hasError('required') &&
+                  (customerForm.get('address').dirty || customerForm.get('address').touched)">
+        Please type address!
+      </div>
+
+      <button type="submit" class="btn btn-secondary" >Edit Customer</button>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-circle-fill ms-5" viewBox="0 0 16 16">
+        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+      </svg>
+      <a routerLink="/customer" class="ms-1 text-decoration-none text-dark">Back to customer list!</a>
+    </form>
+  </div>
+</div>
